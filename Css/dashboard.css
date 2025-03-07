@@ -1,0 +1,18 @@
+::-webkit-scrollbar {
+    display: none;
+}
+.slidebarhover:hover{
+    background-color: rgb(240, 199, 199);
+}
+.f1{
+    color: #C8242F;
+}
+.f2{
+    color: #A2B86C;
+}
+.f3{
+    color: #F16C20;
+}
+.f4{
+    color: #EBC844;
+}

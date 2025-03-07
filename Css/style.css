@@ -1,0 +1,12 @@
+.image{
+    width: 576px;
+    height: 576px;
+    background: transparent 0% 0% no-repeat padding-box;
+    box-shadow: 0px 4px 31px #0000000A;
+    border: 20px solid #FFFFFF;
+    opacity: 1;
+    border-radius: 50%;
+}
+::-webkit-scrollbar {
+    display: none;
+}

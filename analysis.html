@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="./Css/analysis.css">
+    <link rel="stylesheet" href="./Css/dashboard.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top position-sticky bg-white">
+        <div class="container-fluid p-0">
+            <img class="ms-5" id="sideToggler" onclick="sidebar()" src="./images/menu-bar.svg" alt="">
+            <img class="ms-4" src="./images/header-logo.svg" alt="">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <img class="ms-5 ps-2 h-75" src="./images/search-icon.svg" alt="">
+                    </li>
+                    <li class="nav-item">
+                        <input type="search" class="search ms-5 border-0" name="" id="" placeholder="Search">
+                    </li>
+                </ul>
+                <div class="d-flex justify-content-center align-items-center">
+                    <img class="me-5" src="./images/notification-icon.svg" alt="">
+                    <img class="me-3" src="./images/profile.png" alt="">
+                    <select class="me-4 bg-white border-white" name="dropdown" id=""
+                        onchange="(window.location = this.options[this.selectedIndex].value);">
+                        <option value="">John doe</option>
+                        <option value="">My Profile</option>
+                        <option value="https://www.google.com">Switch Account </option>
+                        <option value="./index.html">Logout</option>
+                    </select>
+                    <!-- <span class="me-4">John Doe</span>
+                    <img class="me-5" src="./images/downward-arrow.svg" alt=""> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="d-md-flex bg-light justify-content-between sidec">
+        <div class=" flex-column flex-shrink-0 bg-white " style="width: 280px;">
+            <ul class="nav nav-pills flex-column mb-auto ">
+                <li class="nav-item ">
+                    <a href="./item.html" class="nav-link mb-2 mt-2 text-dark slidebarhover" aria-current="page">
+                        <svg class="bi me-2" width="16" height="16">
+                        </svg>
+                        <span>
+                            <img src="./Images/dashboard-active.svg" alt="" width="20px" height="20px">
+                        </span>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="./analysis.html" class="nav-link link-dark  mb-2 mt-2 slidebarhover text-dark">
+                        <svg class="bi me-2" width="16" height="16"></svg>
+                        <span>
+                            <img src="./Images/graph-default.svg" alt="" width="20px" height="20px">
+                        </span>
+                        Analysis
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link link-dark text-dark mb-2 mt-2 slidebarhover">
+                        <svg class="bi me-2" width="16" height="16"></svg>
+                        <span>
+                            <img src="./Images/inbox-default.svg" alt="" width="20px" height="20px">
+                        </span>
+                        Inbox
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link link-dark  text-dark mb-2 mt-2 slidebarhover">
+                        <svg class="bi me-2" width="16" height="16"></svg>
+                        <span>
+                            <img class="sizeofimg" src="./Images/clock-default.svg" alt="" width="20px" height="20px">
+                        </span>
+                        History
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link link-dark  text-dark mb-2 mt-2 slidebarhover">
+                        <svg class="bi me-2" width="16" height="16"></svg>
+                        <span>
+                            <img src="./Images/user-default.svg" alt="" width="20px" height="20px">
+                        </span>
+                        Users
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link link-dark text-dark mb-2 mt-2 slidebarhover">
+                        <svg class="bi me-2" width="16" height="16"></svg>
+                        <span>
+                            <img src="./Images/maintenance-default.svg" alt="" width="20px" height="20px">
+                        </span>
+                        Maintainance
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link link-dark text-dark slidebarhover">
+                        <svg class="bi me-2" width="16" height="16"></svg>
+                        <span>
+                            <img src="./Images/setting-default.svg" alt="" width="20px" height="20px">
+                        </span>
+                        Setting
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div style="width: 100%">
+            <div class="w-100 bg-light p-5">
+                <div class="row ">
+                    <div class="col h3 mb-3 ">
+                        Analysis
+                    </div>
+                </div>
+                <div class="container-fluid" style="background-color: white;">
+                    <div class="row">
+                        <div class="col mb-3 h5">
+                            <label for="">One Column</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-3">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="row ">
+                        <div class="col mb-3">
+                            <select class=" form-select lg w-100 h-100 text-muted " aria-label="Large select example">
+                                <option selected>Dropdown</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3 margin-header">
+                        <div class="col mb-3">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Multiple Line "></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-3 h5">
+                            <label for="">Two Column</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-3">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+                        </div>
+                        <div class="col mb-3">
+                            <p class="pofinput mb-0  pb-0">
+                                <input class="form-control inputplw" placeholder=" ">
+                                <label class="labelpl">Username</label>
+                            </p>
+                            <!-- <p>
+                             <input type="text" class="form-control input-placeholder" id="username"
+                                placeholder="">
+                                <label class="label-placeholder" for="">Username</label>
+                             </p> -->
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col mb-3">
+                            <input type="password" class="form-control" id="exampleFormControlInput1"
+                                placeholder="password">
+                        </div>
+                        <div class="col mb-3">
+                            <select class=" form-select lg w-100 h-100 text-muted" aria-label="Large select example">
+                                <option selected>dropdown</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <!-- <input type="" class="form-control" id="exampleFormControlInput1" placeholder="dropdown"> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-3 h5">
+                            <label for="">Three Column</label>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col mb-3">
+                            <p class="pofinput mb-0  pb-0">
+                                <input class="form-control inputplw" placeholder=" ">
+                                <label class="labelpl">Focus</label>
+                            </p>
+                            <!-- <p>
+                             <input type="text" class="form-control input-placeholder" id="username"
+                                placeholder="">
+                                <label class="label-placeholder" for="">Username</label>
+                             </p> -->
+                        </div>
+                        <!-- <div class="col mb-3">
+                                <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Focus">
+                            </div> -->
+                        <div class="col mb-3">
+                            <p class="pofinput mb-0  pb-0">
+                                <input class="form-control inputplw" placeholder=" ">
+                                <label class="labelpl">Password</label>
+                            </p>
+                            <!-- <input type="password" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Password"> -->
+                        </div>
+                        <div class="col mb-3">
+                            <p class="pofinput mb-0  pb-0">
+                                <input class="form-control bordercl inputplw" placeholder=" ">
+                                <label class="labelpl" value="johndoe">Disabled</label>
+                            </p>
+                            <!-- <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Disabled" disabled> -->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-3 h5">
+                            <label for="">Four Column</label>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12 col-sm-5 col-md-4 col-lg-3 mb-3">
+                            <p class="pofinput mb-0  pb-0">
+                                <input class="form-control inputplw" placeholder=" ">
+                                <label class="labelpl">Designation</label>
+                            </p>
+                            <!-- <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Designation"> -->
+                        </div>
+                        <div class="col-12 col-sm-5 col-md-4 col-lg-3 mb-3">
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name ">
+                        </div>
+                        <div class="col-12 col-sm-5 col-md-4 col-lg-3 mb-3">
+                            <p class="pofinput mb-0  pb-0">
+                                <input class="form-control inputplw" placeholder=" ">
+                                <label class="labelpl">Username</label>
+                            </p>
+                            <!-- <input type="text" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Username"> -->
+                        </div>
+                        <div class="col-12 col-sm-5 col-md-4 col-lg-3 mb-3">
+                            <select class=" form-select lg w-100 h-100 text-muted" aria-label="Large select example">
+                                <option selected>select </option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-3 h5">
+                            <label for="">Other Design Element</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-3 h5">
+                            <label for="">File Upload</label>
+                        </div>
+                    </div>
+                    <div class="d-flex mb-3">
+                        <div class=" mb-3">
+                            <!-- <input class="border-danger rounded-pill px-2" type="file"> -->
+                            <input type="file" name="" id="" class="fileupload">
+                            <button type="submit" class="btn btn-white text-center filez border-danger rounded-pill px-2">
+                                <img src="./Images/cloud-upload-icon.svg" alt=""><span>Upload</span>
+                            </button>
+                        </div>
+                        <div class="mb-3 pt-1 pl-2">
+                            No Item Selected
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col mb-2 ">
+                            <label class="h5">Radio button</label>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-sm-2 mb-3 ml-3 form-check">
+                            <input type="radio" class="form-check-input" style="accent-color: #FF0000;" name="radio"
+                                type="radio" id="radio1"><span>Option 1</span>
+
+                        </div>
+                        <div class="col-sm-2 mb-3 ml-3 form-check ">
+                            <input class="form-check-input" style="accent-color: #FF0000; " type="radio" id="radio1"
+                                name="radio" checked><span>Option 2</span>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                            <div class="col h5">
+                                <label for="">Radio Button </label>
+                            </div>
+                        </div>
+                        <div class="d-flex "> -->
+                    <!-- <div class="col-2 mb-3 ">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >
+                            <label for="">Option 1</label>
+                            </div>
+                            <div class="col-2 mb-3">
+                             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                <label for="">Option 2</label>
+                            </div> -->
+                    <!-- <div class="d-flex mb-3">
+                                <input class="form-checkinput mr-2" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2" checked>
+                                <p class="pt-3 mr-2">Option 1</p>
+                                <label for="">Option 1</label>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <input class="form-checkinput mr-2" type="radio" name="flexRadioDefault"
+                                    id="flexRadioDefault2">
+                                <p class="pt-3">Option 2</p>
+                            </div>
+                        </div> -->
+                    <div class="row mb-2">
+                        <div class="col mb-2 ">
+                            <label class="h5">Checkbox</label>
+                        </div>
+                    </div>
+
+                    <div class="row  mb-3">
+                        <div class="col-sm-2 mb-3 ml-3 form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" disabled>
+                            <span>Option 1</span>
+
+                        </div>
+                        <div class="col-sm-2 mb-3 ml-3 form-check ">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                            <span>Option 2</span>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                            <div class="col h5 mb-2">
+                                <label for="">Check Box</label>
+                            </div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="d-flex mb-3">
+                                <input type="checkbox" class="mr-2" name="" id="" value="" disabled>
+                                <p class="pt-3 mr-2">Option 1</p>
+                            </div>
+                            <div class="d-flex mb-3">
+                                <input type="checkbox" class="mr-2" name="" id="" value="">
+                                <p class="pt-3 mr-2">Option 2</p>
+                            </div>
+                        </div> -->
+
+                    <div class="row mb-2">
+                        <div class="col h5">
+                            <label for="">Snackbar</label>
+                        </div>
+                    </div>
+                    <div class="row mb-2">
+
+                        <div class="col mb-3 ">
+                            <label class="text-danger w-100 border-danger rounded border" for=""><img
+                                    src="./Images/error-icon.svg" alt="" height="40px">This is an error
+                                Message</label>
+                        </div>
+                        <div class="col mb-3 ">
+                            <label class="border-info w-100 rounded border text-info" for=""><img
+                                    src="./Images/info-icon.svg" alt="" height="40px">This is an Information
+                                Message!</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-3 ">
+                            <label class="text-`warning w-100 border-warning rounded border" for=""><img
+                                    src="./Images/warning-icon.svg" alt="" height="40px">This is an warning
+                                Message</label>
+                        </div>
+                        <div class="col mb-3 ">
+                            <label class="border-success w-100 rounded border text-success" for=""><img
+                                    src="./Images/success-icon.svg" alt="" height="40px">This is an success
+                                Message!</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-2 h5">
+                            <label for="">Call to action </label>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2">
+                        <div class="d-flex mb-3">
+                            <button type="submit" class="btn btn-danger text-center rounded-pill px-4">Primary</button>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <button type="submit"
+                                class="btn btn-white text-center border-danger rounded-pill px-4">Secondary</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col mb-2 h5">
+                            <label for="">Tabs</label>
+                        </div>
+                    </div>
+                    <ul class="nav nav-tabs mb-3" id="myTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active text-dark" id="home-tab" data-bs-toggle="tab"
+                                data-bs-target="#home" type="button" role="tab" aria-controls="#home"
+                                aria-selected="true">Tab1</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link text-dark" id="profile-tab" data-bs-toggle="tab"
+                                data-bs-target="#profile" type="button" role="tab" aria-controls="#profile"
+                                aria-selected="false">Tab2</button>
+                        </li>
+                        <li class="nav-item " role="presentation">
+                            <button class="nav-link text-dark" id="contact-tab" data-bs-toggle="tab"
+                                data-bs-target="#contact" type="button" role="tab" aria-controls="#contact"
+                                aria-selected="false">Tab3</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content mb-5 " id="myTabContent">
+                        <div class="tab-pane fade show" id="home" role="tabpanel" aria-labelledby="home-tab">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                            has been the industry's standard dummy text ever since the 1500s, when an unknown
+                            printer took a galley of type and scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged. It was popularised in the 1960s with the release of
+                            Letraset sheets containing</div>
+                        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">111
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                            has been the industry's standard dummy text ever since the 1500s, when an unknown
+                            printer took a galley of type and scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged. It was popularised in the 1960s with the release of
+                            Letraset sheets containing</div>
+                        <div class="tab-pane fade " id="contact" role="tabpanel" aria-labelledby="contact-tab">111
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                            has been the industry's standard dummy text ever since the 1500s, when an unknown
+                            printer took a galley of type and scrambled it to make a type specimen book. It has
+                            survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged. It was popularised in the 1960s with the release of
+                            Letraset sheets containing</div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="w-100 ">
+            <div class="h3 mt-2 ml-2 pl-4 pt-3">
+                Analysis
+            </div>
+            <div class="bg-white ml-2 pl-4 pt-3">
+                <div class="row ml-4 mr-4 pl-2 ">
+                    <div class="col">
+                        <div class="mb-3">
+                            <label for="exampleFormControlInput1" class="form-label h6 pt-3">One Column</label>
+                            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+                        </div>
+                        <div class="mb-3">
+                            <select class=" form-select-lg w-100" aria-label="Large select example">
+                                <option selected>Open this select menu</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                placeholder="Multiple Line "></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-mb-3">
+                        <label for="">Two Column</label>
+                    </div>
+                </div>  
+                <div class="row">
+                    <div class="col mb-3">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+                    </div>
+                    <div class="col mb-3">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col mb-3">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+                    </div>
+                    <div class="col mb-3">
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        </div>
+    </div>
+</body>
+
+<!-- <!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <style> 
+        #specifyColor { 
+            accent-color: red; 
+        } 
+    </style> 
+</head> 
+  
+<body> 
+    <center> 
+        <h3> Red colored radio button </h3> 
+        <input type="radio" id="specifyColor" 
+            name="radio1" value="GFG"> 
+        <label for="specifyColor">GFG</label> 
+    </center> 
+</body> 
+  
+</html> -->
+
+</html>
